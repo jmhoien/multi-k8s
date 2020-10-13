@@ -1,0 +1,21 @@
+Ruby Version Fix
+
+updated 7-27-2020
+
+In the upcoming lecture, we will be installing Travis inside a Docker container. 
+This will now require using the v2.4 version of Ruby instead of v2.3 as shown in the video. 
+The command will now look like this:
+
+docker run -it -v $(pwd):/app ruby:2.4 sh
+
+With this version, we will no longer be passing the --no-rdoc or --no-ri flags when installing Travis. 
+The command will simply be:
+
+gem install travis 
+
+
+
+travis login --org
+
+travis encrypt-file service-account.json -r jmhoien/multi-k8s --org
+
