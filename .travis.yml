@@ -18,7 +18,7 @@ before_istall:
     - docker build -t jmhoien/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-    - docker run jmhoien/react-test npm test -- --coverage
+    - docker run -e CI=true jmhoien/react-test npm test
 
 deploy:
     provider: script
