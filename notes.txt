@@ -20,6 +20,9 @@ travis login --org
 travis encrypt-file service-account.json -r jmhoien/multi-k8s --org
 
 
+openssl aes-256-cbc -K $encrypted_9f3b5599b056_key -iv $encrypted_9f3b5599b056_iv -in service-account.json.enc -out service-account.json -d
+
+
 
 Fix For Failing Travis Builds
 
